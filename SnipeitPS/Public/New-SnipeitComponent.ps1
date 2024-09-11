@@ -11,6 +11,9 @@ Component name
 .PARAMETER category_id
 ID number of category
 
+.PARAMETER serial
+Serial number of the component
+
 .PARAMETER qty
 Quantity of the components you have
 
@@ -56,6 +59,9 @@ function New-SnipeitComponent() {
 
         [parameter(mandatory = $true)]
         [string]$qty,
+
+        [parameter(Mandatory = $true)]
+        [string]$serial,
 
         [int]$company_id,
 
