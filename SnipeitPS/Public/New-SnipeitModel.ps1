@@ -23,6 +23,9 @@
     .PARAMETER image
     Asset model Image filename and path
 
+    .PARAMETER depreciation_id
+    Asset depreciation schedule
+
     .PARAMETER url
     Deprecated parameter, please use Connect-SnipeitPS instead. URL of Snipeit system.
 
@@ -60,6 +63,9 @@ function New-SnipeitModel() {
         [string]$image,
 
         [parameter(mandatory = $false)]
+        [int]$depreciation_id,
+
+        [parameter(mandatory = $false)]
         [string]$url,
 
         [parameter(mandatory = $false)]
@@ -74,6 +80,7 @@ function New-SnipeitModel() {
             category_id     = $category_id
             manufacturer_id = $manufacturer_id
             fieldset_id     = $fieldset_id
+            depreciation_id = $depreciation_id
         }
 
         if ($PSBoundParameters.ContainsKey('model_number')) { $Values.Add("model_number", $model_number) }

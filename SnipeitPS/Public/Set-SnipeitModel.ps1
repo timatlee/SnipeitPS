@@ -26,6 +26,9 @@
     .PARAMETER image
     Image file name and path for item
 
+    .PARAMETER depreciation_id
+    Asset depreciation schedule
+
     .PARAMETER image_delete
     Remove current image
 
@@ -68,6 +71,9 @@ function Set-SnipeitModel() {
 
         [ValidateScript({Test-Path $_})]
         [string]$image,
+
+        [parameter(mandatory = $false)]
+        [int]$depreciation_id,
 
         [switch]$image_delete=$false,
 
