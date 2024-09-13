@@ -18,7 +18,7 @@ Quantity assigned. Defaults to 1.
 Checkout-ComponentToAsset -id 1 -assigned_to 3 -assigned_qty 1
 #>
 
-function Checkout-ComponentToAsset() {
+function Set-ComponentToAsset() {
     [CmdletBinding(
         SupportsShouldProcess = $true,
         ConfirmImpact = "Low"
